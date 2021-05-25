@@ -1,7 +1,7 @@
 
 # Jusnexo
 
-Foi criada a seguinte estrutura de entidade e relacionamento de acordo com a ideia do startup one.
+Foi criada a seguinte estrutura de entidade e relacionamento de acordo com a idéia do startup one. O projeto consiste em uma plataforma onde pessoas procuram por profissionais da área do direito, por lá também conseguem enviar mensagens através de chats e avaliar seu atendimento para que outras pessoas consigam encontrar bons profissionais.
 
 ![Captura de tela de 2021-05-25 20-26-02](https://user-images.githubusercontent.com/37624437/119580856-ab80fa00-bd97-11eb-8656-8eafc8302ee2.png)
 
