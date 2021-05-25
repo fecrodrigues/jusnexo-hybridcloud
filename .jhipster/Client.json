@@ -1,0 +1,100 @@
+{
+  "name": "Client",
+  "fields": [
+    {
+      "fieldName": "advocate",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "biography",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "birthdate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "firstname",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastname",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "oabnumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "picture",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "credential",
+      "otherEntityRelationshipName": "client",
+      "relationshipName": "credential",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "clientRating",
+      "otherEntityRelationshipName": "client",
+      "relationshipName": "clientRating"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "clientRating",
+      "otherEntityRelationshipName": "clientEvaluator",
+      "relationshipName": "clientEvaluatorRating"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "areaOfExpertise",
+      "otherEntityRelationshipName": "client",
+      "relationshipName": "area",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "chat",
+      "otherEntityRelationshipName": "clientReceiver",
+      "relationshipName": "chatReceiver",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "chat",
+      "otherEntityRelationshipName": "clientSender",
+      "relationshipName": "chatSender",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "client",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210525214249"
+}

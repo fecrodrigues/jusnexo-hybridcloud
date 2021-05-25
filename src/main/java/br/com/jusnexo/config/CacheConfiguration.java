@@ -48,6 +48,21 @@ public class CacheConfiguration {
             createCache(cm, br.com.jusnexo.domain.User.class.getName());
             createCache(cm, br.com.jusnexo.domain.Authority.class.getName());
             createCache(cm, br.com.jusnexo.domain.User.class.getName() + ".authorities");
+            createCache(cm, br.com.jusnexo.domain.Client.class.getName());
+            createCache(cm, br.com.jusnexo.domain.Client.class.getName() + ".clientRatings");
+            createCache(cm, br.com.jusnexo.domain.Client.class.getName() + ".clientEvaluatorRatings");
+            createCache(cm, br.com.jusnexo.domain.Client.class.getName() + ".areas");
+            createCache(cm, br.com.jusnexo.domain.Client.class.getName() + ".chatReceivers");
+            createCache(cm, br.com.jusnexo.domain.Client.class.getName() + ".chatSenders");
+            createCache(cm, br.com.jusnexo.domain.Chat.class.getName());
+            createCache(cm, br.com.jusnexo.domain.Chat.class.getName() + ".messages");
+            createCache(cm, br.com.jusnexo.domain.Chat.class.getName() + ".clientReceivers");
+            createCache(cm, br.com.jusnexo.domain.Chat.class.getName() + ".clientSenders");
+            createCache(cm, br.com.jusnexo.domain.Message.class.getName());
+            createCache(cm, br.com.jusnexo.domain.ClientRating.class.getName());
+            createCache(cm, br.com.jusnexo.domain.Credential.class.getName());
+            createCache(cm, br.com.jusnexo.domain.AreaOfExpertise.class.getName());
+            createCache(cm, br.com.jusnexo.domain.AreaOfExpertise.class.getName() + ".clients");
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity AreaOfExpertise.
+    -->
+    <changeSet id="20210525214254-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="area_of_expertise_id"
+                                 baseTableName="rel_area_of_expertise__client"
+                                 constraintName="fk_rel_area_of_expertise__client__area_of_expertise_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="area_of_expertise"/>
+
+        <addForeignKeyConstraint baseColumnNames="client_id"
+                                 baseTableName="rel_area_of_expertise__client"
+                                 constraintName="fk_rel_area_of_expertise__client__client_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="client"/>
+    </changeSet>
+</databaseChangeLog>

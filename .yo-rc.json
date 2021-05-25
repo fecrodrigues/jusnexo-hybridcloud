@@ -41,6 +41,8 @@
     "packageFolder": "br/com/jusnexo",
     "jwtSecretKey": "YjY1ZjU4NTY2NWZiNDQxYWQwZWVlOTUxOTY0YzA5YzMzNjRkZjI0MjMzMmQxOWUyZDQwMmRkOWRjMTc4NDY0MjYyNDAzMjFmMzY1MGRiOGU0OWZkZTBhNzU4YWZkMzYwZmY5MzZiMTRmM2YwNGEyZTBiMGYwYTEwY2I0YmI3NzQ=",
     "clientPackageManager": "npm",
-    "languages": ["en", "fr"]
+    "languages": ["en", "fr"],
+    "entities": ["Client", "Chat", "Message", "ClientRating", "Credential", "AreaOfExpertise"],
+    "lastLiquibaseTimestamp": 1621978974000
   }
 }

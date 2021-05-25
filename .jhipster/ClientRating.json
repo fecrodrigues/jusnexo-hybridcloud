@@ -1,0 +1,39 @@
+{
+  "name": "ClientRating",
+  "fields": [
+    {
+      "fieldName": "score",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "clientRating",
+      "relationshipName": "client"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "clientEvaluatorRating",
+      "relationshipName": "clientEvaluator"
+    }
+  ],
+  "entityTableName": "client_rating",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210525214252"
+}

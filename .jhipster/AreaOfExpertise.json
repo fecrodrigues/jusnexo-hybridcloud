@@ -1,0 +1,32 @@
+{
+  "name": "AreaOfExpertise",
+  "fields": [
+    {
+      "fieldName": "areaName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isSelected",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "area",
+      "relationshipName": "client",
+      "ownerSide": true
+    }
+  ],
+  "entityTableName": "area_of_expertise",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210525214254"
+}

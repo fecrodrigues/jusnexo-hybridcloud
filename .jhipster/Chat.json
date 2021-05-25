@@ -1,0 +1,41 @@
+{
+  "name": "Chat",
+  "fields": [
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "message",
+      "otherEntityRelationshipName": "chat",
+      "relationshipName": "message"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "chatReceiver",
+      "relationshipName": "clientReceiver",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "chatSender",
+      "relationshipName": "clientSender",
+      "ownerSide": true
+    }
+  ],
+  "entityTableName": "chat",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210525214250"
+}

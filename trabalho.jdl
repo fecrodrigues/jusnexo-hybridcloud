@@ -1,0 +1,60 @@
+
+entity Client {
+    advocate Boolean required,
+    biography TextBlob,
+    birthdate LocalDate required,
+    firstname String required,
+    lastname String required,
+    oabnumber String,
+    phone String required,
+    createdAt LocalDate,
+    picture ImageBlob
+}
+
+
+entity Chat {
+	createdAt LocalDate
+}
+
+
+entity Message {
+	description String,
+    createdAt LocalDate
+}
+
+entity ClientRating {
+	score Integer required,
+    description String required
+}
+
+entity Credential {
+	password String required,
+	username String required   
+}
+
+entity AreaOfExpertise {
+	areaName String,
+    isSelected Boolean
+}
+
+relationship OneToOne {
+	Client{credential} to Credential{client}
+}
+
+relationship OneToMany {
+    Chat{message} to Message{chat},
+    Client{clientRating} to ClientRating{client},   
+    Client{clientEvaluatorRating} to ClientRating{clientEvaluator}
+}
+
+relationship ManyToMany {
+	AreaOfExpertise{client} to Client{area},
+	Chat{clientReceiver} to Client{chatReceiver}
+    Chat{clientSender} to Client{chatSender}
+}
+
+//paginate Aluno with infinite-scroll
+paginate Client, ClientRating, Credential, AreaOfExpertise, Message, Chat with pagination
+
+service all with serviceImpl
+
